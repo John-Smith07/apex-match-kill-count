@@ -62,7 +62,7 @@
   .hud{display:inline-flex;align-items:stretch;font-family:"Chakra Petch",sans-serif}
   .chip[data-metric="matches"]{--c:var(--cool)}
   .chip[data-metric="kills"]{--c:var(--hot)}
-  .chip[hidden]{display:none}
+  .chip[hidden]{display:none !important}
   .chip__label{
     font-weight:600;letter-spacing:.16em;text-transform:uppercase;
     display:flex;align-items:center;gap:7px;white-space:nowrap;
@@ -93,6 +93,7 @@
     display:flex;align-items:center;gap:14px;padding:12px 26px;
   }
   .hud[data-theme="bar"] .chip + .chip{border-left:1px solid var(--line)}
+  .hud[data-theme="bar"] .chip[hidden] + .chip{border-left:0}
   .hud[data-theme="bar"] .chip__label{font-size:15px;color:var(--c)}
   .hud[data-theme="bar"] .chip__label small{display:none}
   .hud[data-theme="bar"] .chip__value{font-size:42px;color:#fff}
